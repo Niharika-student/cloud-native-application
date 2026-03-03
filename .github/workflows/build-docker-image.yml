@@ -30,10 +30,10 @@ jobs:
 # Step 4: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t lavanyasusanna/myapp:${{ github.sha }} .
+          docker build -t puvvadaniharika/myapp:${{ github.sha }} .
 
       # Step 5: Optionally, push the Docker image to Docker Hub
       - name: Push Docker image
         if: github.ref == 'refs/heads/main'  # Only push on main branch
         run: |
-          docker push lavanyasusanna/myapp:${{ github.sha }}
+          docker push puvvadaniharika/myapp:${{ github.sha }}
